@@ -1,0 +1,15 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 180px;
+  width: 180px;
+}
+
+.featureLink {
+  font-weight: 600;
+}

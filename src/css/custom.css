@@ -1,0 +1,77 @@
+/**
+ * Global overrides for Infima / Docusaurus classic theme.
+ * Palette: deep-water blue (primary) + safety-orange (accent),
+ * aligned with the FluidHero WebGL and the homepage icons.
+ */
+
+/* ---------- Light mode ---------- */
+:root {
+  /* Primary: deep-water blue */
+  --ifm-color-primary: #1a6fa8;
+  --ifm-color-primary-dark: #175f90;
+  --ifm-color-primary-darker: #155887;
+  --ifm-color-primary-darkest: #11486f;
+  --ifm-color-primary-light: #1e7fc0;
+  --ifm-color-primary-lighter: #2489cc;
+  --ifm-color-primary-lightest: #3f9cd9;
+
+  /* Surfaces */
+  --ifm-background-color: #f7fafc;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-color-emphasis-0: #ffffff;
+  --ifm-color-emphasis-100: #eef3f7;
+  --ifm-color-emphasis-200: #dde7f0;
+  --ifm-color-emphasis-300: #c3d1de;
+
+  /* Text */
+  --ifm-font-color-base: #1c2836;
+  --ifm-heading-color: #0d2c4a;
+
+  /* Accent (safety orange — use for callouts, buttons--secondary highlights) */
+  --swr-color-accent: #f28a3a;
+  --swr-color-accent-dark: #d77422;
+
+  /* Code blocks */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(26, 111, 168, 0.12);
+}
+
+/* ---------- Dark mode ---------- */
+[data-theme='dark'] {
+  /* Primary: brighter cyan-blue so it reads on dark surfaces */
+  --ifm-color-primary: #5fb8e8;
+  --ifm-color-primary-dark: #3fa6de;
+  --ifm-color-primary-darker: #2e9cd8;
+  --ifm-color-primary-darkest: #1a7fb4;
+  --ifm-color-primary-light: #7ec4ed;
+  --ifm-color-primary-lighter: #8fcbef;
+  --ifm-color-primary-lightest: #b4dcf4;
+
+  /* Surfaces — deep-water background */
+  --ifm-background-color: #0d1f2c;
+  --ifm-background-surface-color: #14293a;
+
+  /* Text */
+  --ifm-font-color-base: #e6edf3;
+  --ifm-heading-color: #ffffff;
+
+  /* Accent stays warm so it pops against cool blues */
+  --swr-color-accent: #f4a05a;
+  --swr-color-accent-dark: #f28a3a;
+
+  --docusaurus-highlighted-code-line-bg: rgba(95, 184, 232, 0.14);
+}
+
+/* ---------- Secondary button accent ---------- */
+/* Give the "Get Involved" / secondary CTAs a safety-orange edge. */
+.button--secondary {
+  background-color: var(--swr-color-accent);
+  border-color: var(--swr-color-accent-dark);
+  color: #ffffff;
+}
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: var(--swr-color-accent-dark);
+  border-color: var(--swr-color-accent-dark);
+  color: #ffffff;
+}

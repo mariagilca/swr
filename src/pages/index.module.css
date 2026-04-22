@@ -1,0 +1,58 @@
+.heroBanner {
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  /* The FluidHero wrapper now owns the water. Keep the banner transparent so
+     the canvas shows through, and let the shared scrim handle legibility. */
+  background: transparent;
+  color: #ffffff;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* Soft shadow lifts the title off the moving water without looking "heavy". */
+  text-shadow: 0 2px 24px rgba(0, 20, 40, 0.45);
+}
+
+.heroSubtitle {
+  font-size: 1.35rem;
+  max-width: 780px;
+  margin: 1rem auto 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 16px rgba(0, 20, 40, 0.4);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1.5rem;
+  }
+  .heroTitle {
+    font-size: 2.1rem;
+  }
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cta {
+  padding: 4rem 0;
+  background: var(--ifm-background-surface-color);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.ctaLede {
+  font-size: 1.1rem;
+  max-width: 820px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.65;
+}
