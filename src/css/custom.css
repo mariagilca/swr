@@ -1,77 +1,289 @@
 /**
- * Global overrides for Infima / Docusaurus classic theme.
- * Palette: deep-water blue (primary) + safety-orange (accent),
- * aligned with the FluidHero WebGL and the homepage icons.
+ * Theme variables for the Backcountry Swiftwater Rescue site.
+ * Palette: deep navy from SAR badges, coral/orange accent, river-teal supporting.
  */
 
-/* ---------- Light mode ---------- */
 :root {
-  /* Primary: deep-water blue */
-  --ifm-color-primary: #1a6fa8;
-  --ifm-color-primary-dark: #175f90;
-  --ifm-color-primary-darker: #155887;
-  --ifm-color-primary-darkest: #11486f;
-  --ifm-color-primary-light: #1e7fc0;
-  --ifm-color-primary-lighter: #2489cc;
-  --ifm-color-primary-lightest: #3f9cd9;
+  /* Primary — deep navy (SAR badge) */
+  --ifm-color-primary: #1d3a8a;
+  --ifm-color-primary-dark: #1a347c;
+  --ifm-color-primary-darker: #183175;
+  --ifm-color-primary-darkest: #142861;
+  --ifm-color-primary-light: #234398;
+  --ifm-color-primary-lighter: #25469f;
+  --ifm-color-primary-lightest: #2c52b6;
 
-  /* Surfaces */
-  --ifm-background-color: #f7fafc;
-  --ifm-background-surface-color: #ffffff;
-  --ifm-color-emphasis-0: #ffffff;
-  --ifm-color-emphasis-100: #eef3f7;
-  --ifm-color-emphasis-200: #dde7f0;
-  --ifm-color-emphasis-300: #c3d1de;
+  /* Accent — coral/orange (ribbon) */
+  --ifm-color-warning: #e76f51;
+  --ifm-color-warning-light: #f4a261;
 
-  /* Text */
-  --ifm-font-color-base: #1c2836;
-  --ifm-heading-color: #0d2c4a;
+  /* Support — river teal */
+  --ifm-color-success: #2a9d8f;
 
-  /* Accent (safety orange — use for callouts, buttons--secondary highlights) */
-  --swr-color-accent: #f28a3a;
-  --swr-color-accent-dark: #d77422;
+  /* Site-specific tokens */
+  --swr-ink: #0f1937;
+  --swr-ink-soft: #2b3a5e;
+  --swr-paper: #f7f5ee;
+  --swr-line: #e1e6f0;
 
-  /* Code blocks */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(26, 111, 168, 0.12);
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-heading-line-height: 1.2;
+  --ifm-line-height-base: 1.65;
+  --ifm-paragraph-margin-bottom: 1.1rem;
+  --ifm-link-hover-decoration: none;
+  --ifm-navbar-shadow: 0 1px 0 rgba(15, 25, 55, 0.06);
+  --ifm-navbar-height: 64px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- Dark mode ---------- */
 [data-theme='dark'] {
-  /* Primary: brighter cyan-blue so it reads on dark surfaces */
-  --ifm-color-primary: #5fb8e8;
-  --ifm-color-primary-dark: #3fa6de;
-  --ifm-color-primary-darker: #2e9cd8;
-  --ifm-color-primary-darkest: #1a7fb4;
-  --ifm-color-primary-light: #7ec4ed;
-  --ifm-color-primary-lighter: #8fcbef;
-  --ifm-color-primary-lightest: #b4dcf4;
+  --ifm-color-primary: #6b8ce8;
+  --ifm-color-primary-dark: #5078e2;
+  --ifm-color-primary-darker: #466fdf;
+  --ifm-color-primary-darkest: #2a55c9;
+  --ifm-color-primary-light: #86a0ee;
+  --ifm-color-primary-lighter: #91a8f0;
+  --ifm-color-primary-lightest: #b4c2f5;
 
-  /* Surfaces — deep-water background */
-  --ifm-background-color: #0d1f2c;
-  --ifm-background-surface-color: #14293a;
-
-  /* Text */
-  --ifm-font-color-base: #e6edf3;
-  --ifm-heading-color: #ffffff;
-
-  /* Accent stays warm so it pops against cool blues */
-  --swr-color-accent: #f4a05a;
-  --swr-color-accent-dark: #f28a3a;
-
-  --docusaurus-highlighted-code-line-bg: rgba(95, 184, 232, 0.14);
+  --ifm-background-color: #0f1937;
+  --ifm-background-surface-color: #142346;
+  --swr-line: rgba(255, 255, 255, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* ---------- Secondary button accent ---------- */
-/* Give the "Get Involved" / secondary CTAs a safety-orange edge. */
+/* Body — slightly warmer surface for content pages */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography hierarchy — stronger and calmer */
+.markdown h1:first-child {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.015em;
+}
+
+.markdown h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.6rem);
+  margin-top: 2.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--swr-line);
+  letter-spacing: -0.005em;
+}
+
+.markdown h3 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .markdown h3 {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.markdown p,
+.markdown li {
+  font-size: 1.0125rem;
+}
+
+.markdown blockquote {
+  border-left: 3px solid var(--ifm-color-warning);
+  background: rgba(231, 111, 81, 0.07);
+  padding: 0.75rem 1.1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--swr-ink-soft);
+}
+
+[data-theme='dark'] .markdown blockquote {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(231, 111, 81, 0.12);
+}
+
+.markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables — sturdier rule with zebra stripes for the comparison-heavy pages */
+.markdown table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.75rem 0;
+  border: 1px solid var(--swr-line);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.97rem;
+}
+
+.markdown table thead {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.markdown table thead th {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 0;
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+}
+
+.markdown table td {
+  border: 0;
+  border-top: 1px solid var(--swr-line);
+  padding: 0.7rem 1.1rem;
+  vertical-align: top;
+}
+
+.markdown table tbody tr:nth-child(odd) td {
+  background-color: rgba(29, 58, 138, 0.025);
+}
+
+[data-theme='dark'] .markdown table tbody tr:nth-child(odd) td {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+/* Callout-style admonition tweaks */
+.alert--info {
+  border-left-width: 4px;
+}
+
+/* Navbar polish */
+.navbar {
+  border-bottom: 1px solid var(--swr-line);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.97rem;
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.navbar__link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ifm-color-warning);
+  border-radius: 2px;
+}
+
+.navbar__item {
+  position: relative;
+}
+
+/* GitHub icon link in navbar */
+.header-github-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+}
+
+.header-github-link::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.36.78 1.07.78 2.16 0 1.56-.01 2.81-.01 3.19 0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z'/></svg>") no-repeat center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.36.78 1.07.78 2.16 0 1.56-.01 2.81-.01 3.19 0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z'/></svg>") no-repeat center / contain;
+}
+
+/* Buttons — bolder primary CTA on hero */
+.button--primary {
+  background-color: var(--ifm-color-warning);
+  border-color: var(--ifm-color-warning);
+  color: #fff;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: #d35e41;
+  border-color: #d35e41;
+  color: #fff;
+}
+
 .button--secondary {
-  background-color: var(--swr-color-accent);
-  border-color: var(--swr-color-accent-dark);
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+  backdrop-filter: blur(4px);
 }
+
 .button--secondary:hover,
 .button--secondary:focus {
-  background-color: var(--swr-color-accent-dark);
-  border-color: var(--swr-color-accent-dark);
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Footer — softer dark tone */
+.footer--dark {
+  background-color: var(--swr-ink);
+  --ifm-footer-link-hover-color: var(--ifm-color-warning-light);
+}
+
+.footer__title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ifm-color-warning-light);
+}
+
+.footer__link-item {
+  font-size: 0.95rem;
+}
+
+.footer__copyright {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* Content page width — wide enough that the TOC sidebar doesn't get squeezed */
+.main-wrapper > .container {
+  max-width: 1280px;
+}
+
+/* Cap article line length so content stays readable even at the wider page width */
+.main-wrapper > .container article {
+  max-width: 76ch;
+}
+
+/* Hand the TOC a bit more room than Infima's default col--2 */
+[class*='mdxPageWrapper'] > .col--8 {
+  flex: 0 0 74%;
+  max-width: 74%;
+}
+
+[class*='mdxPageWrapper'] > .col--2 {
+  flex: 0 0 24%;
+  max-width: 24%;
+}
+
+@media (max-width: 996px) {
+  [class*='mdxPageWrapper'] > .col--8,
+  [class*='mdxPageWrapper'] > .col--2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

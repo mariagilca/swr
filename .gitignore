@@ -1,15 +1,12 @@
 # Dependencies
 /node_modules
 
-# Production
+# Production build
 /build
 
 # Generated files
 .docusaurus
 .cache-loader
-
-# Claude local settings
-.claude/
 
 # Misc
 .DS_Store
